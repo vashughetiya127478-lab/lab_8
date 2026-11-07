@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f2f3f6; color: #222; }
+header { background: navy; color: white; text-align: center; padding: 20px; }
+header h1 { margin: 0; }
+nav { background: white; padding: 15px 8%; }
+nav a { margin-right: 22px; color: navy; font-weight: bold; text-decoration: none; }
+main { background: white; max-width: 1150px; margin: 28px auto; padding: 28px; border: 1px solid #ddd; min-height: 400px; }
+footer { text-align: center; padding: 20px; color: #666; }
+table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+th { background: #e9edf5; }
+.btn { display: inline-block; background: navy; color: white; padding: 10px 15px; border: 0; text-decoration: none; cursor: pointer; font-size: 15px; }
+.gray { background: #666; } .red { background: #b00020; }
+.input { width: 100%; padding: 10px; border: 1px solid #aaa; border-radius: 3px; }
+.form-group { margin-bottom: 15px; max-width: 650px; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 6px; }
+.error { color: #b00020; } .success { padding: 12px; background: #d4edda; color: #155724; margin: 12px 0; }
+.actions { white-space: nowrap; }

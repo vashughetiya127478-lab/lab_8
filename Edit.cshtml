@@ -1,0 +1,14 @@
+@model InventoryItem
+@{ ViewData["Title"] = "Edit Item"; }
+<h2>Edit Inventory Item</h2>
+<form action="/Inventory/Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input asp-for="ItemId" type="hidden" />
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+    <div class="form-group"><label asp-for="ItemName"></label><input asp-for="ItemName" class="input" /><span asp-validation-for="ItemName" class="error"></span></div>
+    <div class="form-group"><label asp-for="Category"></label><input asp-for="Category" class="input" /><span asp-validation-for="Category" class="error"></span></div>
+    <div class="form-group"><label asp-for="Quantity"></label><input asp-for="Quantity" type="number" class="input" /><span asp-validation-for="Quantity" class="error"></span></div>
+    <div class="form-group"><label asp-for="UnitPrice"></label><input asp-for="UnitPrice" type="number" step="0.01" class="input" /><span asp-validation-for="UnitPrice" class="error"></span></div>
+    <div class="form-group"><label asp-for="Supplier"></label><input asp-for="Supplier" class="input" /><span asp-validation-for="Supplier" class="error"></span></div>
+    <button type="submit" class="btn">Update Item</button> <a class="btn gray" href="/Inventory/Index">Cancel</a>
+</form>

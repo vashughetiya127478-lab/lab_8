@@ -1,0 +1,17 @@
+@model List<InventoryItem>
+@{ ViewData["Title"] = "Inventory List"; }
+<h2>Inventory List</h2>
+@if (TempData["Message"] != null) { <div class="success">@TempData["Message"]</div> }
+<p><a class="btn" href="/Inventory/Create">Add New Item</a></p>
+<table>
+<thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Quantity</th><th>Price</th><th>Supplier</th><th>Actions</th></tr></thead>
+<tbody>
+@foreach (var item in Model)
+{
+<tr>
+<td>@item.ItemId</td><td>@item.ItemName</td><td>@item.Category</td><td>@item.Quantity</td>
+<td>@item.UnitPrice.ToString("0.00")</td><td>@item.Supplier</td>
+<td class="actions"><a href="/Inventory/Details/@item.ItemId">Details</a> | <a href="/Inventory/Edit/@item.ItemId">Edit</a> | <a href="/Inventory/Delete/@item.ItemId">Delete</a></td>
+</tr>
+}
+</tbody></table>

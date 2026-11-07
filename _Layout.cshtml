@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - DN-8 Inventory</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+<header><h1>Inventory Management System</h1><p>DN-8 | ADO.NET CRUD Operations</p></header>
+<nav>
+    <a href="/Inventory/Index">Inventory List</a>
+    <a href="/Inventory/Create">Add Item</a>
+</nav>
+<main>
+    @RenderBody()
+</main>
+<footer>DN-8 Inventory Management</footer>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
